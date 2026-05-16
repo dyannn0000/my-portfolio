@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+    /* ===== GENERAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    padding-top: 90px;
+}
+
+/* ===== HOME SECTION ===== */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 120px 10% 60px;
+    flex-wrap: wrap;
+    background-color: #ffffff !important;;
+}
+
+/* ===== IMAGE ===== */
+.home-img img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== CONTENT ===== */
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.home-content h1 span {
+    color: #001e88;
+}
+
+.home-content h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.home-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000 !important;
+    text-align: justify;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    padding: 18px 8%;
+    background: linear-gradient(to right, #8a2be2, #ff7eb3);
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== LOGO ===== */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.navbar-brand i {
+    font-style: normal;
+}
+
+.navbar-brand:hover {
+    color: #ffe6f2 !important;
+    transform: scale(1.03);
+}
+
+/* ===== NAV LINKS ===== */
+.navbar-nav .nav-item {
+    margin: 0 45px;
+    color: #000000 !important;
+}
+
+.nav-link {
+    color: black !important;
+    font-size: 1rem;
+    font-weight: 200;
+    position: relative;
+    transition: 0.3s ease;
+    padding: 10px 0 !important;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Underline Animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active Link */
+.nav-item.active .nav-link::after {
+    width: 100%;
+}
+
+/* ===== MOBILE BUTTON ===== */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar-collapse {
+        margin-top: 15px;
+        background: linear-gradient(to right, #8a2be2, #ff7eb3);
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 12px 0;
+    }
+}
+
+/* ===== BUTTON ===== */
+.btn-custom {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 32px;
+    border-radius: 50px;
+    background: #1d357d;
+    color: white;
+    font-weight: 400;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: #3c74dc;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+/* ===== TYPING TEXT ===== */
+.typing-text span {
+    color: #001e88;
+    font-weight: 550;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .home-content p {
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1rem;
+    }
+
+    .home-content p {
+        font-size: 0.95rem;
+    }    
+}
+
+.education {
+    padding: 100px 10%;
+    background: #b9b2b2;
+}
+
+.education h2 {
+    font-size: 25px; 
+    font-weight: 600;  
+    margin-bottom: 5px;
+    color: #000000;
+}
+/* Card */
+.education-item {
+    background: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #007BFF;
+    
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Title */
+.education-item h3 {
+    font-size: 18px;   
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+/* School */
+.school {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f0096;
+    margin-bottom: 3px;
+}
+
+/* Year */
+.year {
+    display: block;
+    font-size: 14px;
+    color: #252525;
+    margin-bottom: 6px;
+}
+
+/* CGPA + MUET badges */
+.CGPA, .MUET, .result{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e8f1ff;
+    color: #007BFF;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+/* Paragraph */
+.education-item p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #333;
+    margin-top: 6px;
+}
+
+.education .btn{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: #1d357d;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    border: none;
+}
+
+.education .btn:hover {
+    background: #3c74dc;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.projects {
+    padding: 100px 10%;
+    background: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 25px; 
+    font-weight: 600;  
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+/* Project Card */
+.project-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card h3 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Video */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-section {
+    padding: 60px 20px;
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    width: 260px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.card i {
+    font-size: 10px;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: #273449;
+}
+
+.working-exp {
+    padding: 100px 10%;
+    background: #ffffff;
+}
+
+.working-exp h2 {
+    font-size: 25px; 
+    font-weight: 600;  
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+/* COMPANY CARD */
+.company-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+/* LEFT LOGO */
+.img-logo {
+    flex: 0 0 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 10px;
+}
+
+/* RIGHT CONTENT */
+.company-details {
+    flex: 1;
+    min-width: 250px;
+}
+
+.company-details h3 {
+    font-size: 22px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.company-details h4 {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.company-details p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e2e8f0;
+    text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .company-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-details h3 {
+        font-size: 2rem;
+    }
+
+    .company-details p {
+        font-size: 1.3rem;
+    }
+}
+
+.documentation {
+    padding: 100px 10%;
+    background: #ffffff;
+    color: white;
+}
+
+.documentation h2 {
+    font-size: 25px; 
+    font-weight: 600;  
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.documentation p {
+    font-size: 15px;  
+    margin-bottom: 15px;
+    color: #ba0000;
+}
+
+.documentation .subtitle {
+    font-size: 18px;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+/* GRID */
+.doc-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.doc-card {
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.doc-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.doc-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.sliderdoc {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slidedoc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slidedoc.active {
+    opacity: 1;
+}
+
+/* CAPTION */
+.caption {
+    padding: 15px;
+    font-size: 15px;
+    color: #e2e8f0;
+    line-height: 1.6;
+    text-align: center;
+    
+}
+
+/* VIDEO STYLE INSIDE CARD */
+.video-card video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #000;
+    display: block;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 30px 10%;
+    background: #0f172a;
+    color: white;
+    flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-left {
+    flex: 1;
+    min-width: 800px;
+}
+
+.contact-left h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    max-width: 600px;
+    text-align: justify;
+}
+
+/* RIGHT SIDE */
+.contact-right {
+    flex: 1;
+    min-width: 50px;
+}
+
+.contact-details p,
+.social-media p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+
+.contact strong {
+    color: #38bdf8;
+}
+
+/* SOCIAL LINKS */
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: white;
+    background: #1e293b;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.social-media ul li a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 5%;
+    }
+
+    .contact-left h3 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center" style="max-width: 1400px; margin: 0 auto;">
+            
+            <!-- Left: Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i>portfolio.</i>
+            </a>
+        
+            <!-- Center: Nav Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#working-exp">Working Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#documentation">Documentation</a></li>
+                    <li class="nav-item"><a class="nav-link font-weight-bold" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="img/gambar.jpg" alt="">
+        </div>
+        <div class="home-content">
+
+            <h1>Hi, It's <span>Diana Nur Syazleen</span></h1>
+
+            <h3 class="typing-text">I'm a <span>fresh graduate with a Bachelor of Computer Science (Hons.) in Multimedia Computing. </span></h3>
+            <p>
+            I have a strong passion for technology and creative problem-solving, and I enjoy transforming ideas into functional and meaningful digital solutions. With hands-on experience in system development and design, I am eager to grow, contribute, and continuously learn in the tech industry.
+            </p>
+
+            <a href="#projects" class="btn-custom">View My Projects</a>
+
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <h3>Bachelor of Computer Science (Hons.) Multimedia Computing</h3>
+                <span class="school">Universiti Teknologi MARA Cawangan Melaka Kampus Jasin</span>
+                <span class="year">2022 - 2026</span>
+                <span class="CGPA">CGPA : 3.2</span>
+                <p>
+                    Focused on web development, multimedia systems, and software engineering.
+                    Completed projects involving system development and interactive applications.
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>Matriculation</h3>
+                <span class="school">Penang Matriculation College</span>
+                <span class="year">2021 - 2022</span>
+                <span class="CGPA">CGPA : 3.63</span>
+                <span class="MUET">MUET : Band 4</span>
+                <p>
+                    Built strong foundation in science, mathematics, and computing basics.
+                </p>
+            </div>
+            <div class="education-item">
+                <h3>SPM</h3>
+                <span class="school">SMK Abu Bakar Al-Baqir</span>
+                <span class="year">2020</span>
+                <span class="result">Result : 5A 2B 3C</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+
+        <h3>Hall Rental System</h3>
+
+        <p>
+            A web-based system developed to simplify hall reservation and booking management processes. 
+            The system allows users to check hall availability, submit booking requests, and manage reservation details efficiently.
+        </p>
+
+        <p>
+            The admin module provides features for managing booking approvals, hall schedules, and user records. 
+            The system was developed using HTML, CSS, PHP, and MySQL with a focus on usability, responsive design, and efficient data management.
+        </p>
+
+        <p>
+            In addition, the system includes a dashboard that visualizes booking data through graphs and charts for easier monitoring and analysis. 
+            It is also capable of automatically calculating total hall rental income on a monthly and yearly basis to assist in financial tracking and reporting.
+        </p>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project1-1.png" class="slide active">
+            <img src="img/project1-2.png" class="slide">
+            <img src="img/project1-3.png" class="slide">
+        </div>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project1-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+
+        <h3>Registrar Announcement System</h3>
+
+        <p>
+            A web-based announcement management system developed to assist in disseminating official information and updates efficiently within the university environment.
+        </p>
+
+        <p>
+            The system allows administrators to create, manage, and publish announcements through a centralized platform with a user-friendly interface. 
+            It was developed using HTML, CSS, PHP, and MySQL with a focus on improving information accessibility and announcement management.
+        </p>
+
+        <p>
+            This project was initially developed as a demonstration system before the implementation of the official Registrar Department website at Universiti Sains Malaysia (USM). 
+            The system served as an early prototype to visualize and evaluate the functionality, layout, and announcement flow before further development in the official platform.
+        </p>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project2-1.png" class="slide active">
+            <img src="img/project2-2.png" class="slide">
+            <img src="img/project2-3.png" class="slide">
+        </div>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project2-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+
+        <h3>Dunia Isomer</h3>
+
+        <p>
+            Dunia Isomer is a Mobile Game-Based Learning Application developed as a Final Year Project to assist students in understanding the concept of isomerism in Chemistry through interactive and engaging gameplay.
+        </p>
+
+        <p>
+            The application integrates educational content with game-based learning elements such as drag-and-drop activities, quizzes, and progressive challenge levels to create a more interactive learning experience. 
+            The game was designed to simplify abstract chemistry concepts and improve students’ engagement during the learning process.
+        </p>
+
+        <p>
+            Usability and effectiveness testing were conducted among students at SMK P Kapar to evaluate the application’s user experience and learning impact. 
+            The findings showed positive feedback in terms of usability and engagement. However, the effectiveness results were limited due to the time-consuming nature of the application during the testing session.
+        </p>
+
+        <p>
+            In addition, the testing process may contain sampling bias as the evaluation was conducted only among female students since the selected school consists exclusively of female students. 
+            Despite these limitations, the project demonstrates the potential of mobile game-based learning as an alternative educational tool for Chemistry subjects.
+        </p>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project3-1.jpg" class="slide active">
+            <img src="img/project3-2.jpg" class="slide">
+            <img src="img/project3-3.jpg" class="slide">
+            <img src="img/project3-4.jpg" class="slide">
+            <img src="img/project3-5.jpg" class="slide">
+        </div>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project3-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <!-- Project 8 -->
+    <div class="project-card">
+
+        <h3>3D Modelling (Blender Project)</h3>
+
+        <p>
+            A series of 3D models were created using Blender to demonstrate fundamental skills in 3D modelling, object design, and digital visualization. The project includes the development of multiple objects such as a character model, a box, a bullet box, and a house structure.
+        </p>
+
+        <p>
+            Each model was designed using basic to intermediate modelling techniques, including mesh editing, extrusion, scaling, and shaping to achieve accurate forms and proportions. Attention was given to object detail and structure to ensure each model is visually clear and suitable for use in a 3D environment.
+        </p>
+
+        <p>
+            The character model focuses on basic humanoid structure design, while the box and bullet box demonstrate simple hard-surface modelling techniques. The house model showcases architectural modelling principles, including walls, roof structure, and spatial layout.
+        </p>
+
+        <p>
+            Overall, this project highlights the application of Blender in creating diverse 3D assets and strengthens understanding of modelling workflows used in game development and animation environments. These models were also implemented in the educational game environment <em>Dunia Isomer</em> to support interactive learning and enhance the visual experience within the game.
+        </p>
+
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project8-1.png" class="slide active">
+            <img src="img/project8-2.png" class="slide">
+            <img src="img/project8-3.png" class="slide">
+            <img src="img/project8-4.png" class="slide">
+            <img src="img/project8-5.png" class="slide">
+            <img src="img/project8-6.png" class="slide">
+            <img src="img/project8-7.png" class="slide">
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+
+        <h3>Dengue Defender</h3>
+
+        <p>
+            Dengue Defender is a 2D educational game developed to raise awareness about dengue fever and promote effective prevention methods through immersive, level-based gameplay.
+        </p>
+
+        <p>
+            The game is structured into three progressive levels, each designed with different environments and learning objectives. In Level 1, the setting is a pharmacy where players are introduced to the correct medication and basic treatment knowledge for dengue patients.
+        </p>
+
+        <p>
+            In Level 2, the game transitions to a residential outdoor environment where players must identify and clean mosquito breeding sites. This level focuses on reinforcing awareness of prevention practices in everyday surroundings.
+        </p>
+
+        <p>
+            In Level 3, players enter an action-based outdoor setting where they use spraying tools to eliminate flying mosquitoes. To enhance gameplay strategy and engagement, players can also restore health by collecting vaccines when hit by mosquitoes.
+        </p>
+
+        <p>
+            Overall, the game combines educational content with interactive mechanics to improve understanding of dengue prevention while maintaining an engaging and enjoyable learning experience.
+        </p>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project4-1.png" class="slide active">
+            <img src="img/project4-2.png" class="slide">
+            <img src="img/project4-3.png" class="slide">
+            <img src="img/project4-4.png" class="slide">
+        </div>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project4-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+
+        <h3>Online vs Physical Shopping</h3>
+
+        <p>
+            A machine learning-based predictive analysis project aimed at identifying user preferences between online and physical shopping.
+        </p>
+
+        <p>
+            The study was conducted using a dataset of over 500 respondent entries to analyze consumer behavior and determine shopping preferences. 
+            A Logistic Regression (LR) model was applied to classify user preferences, with K-Fold cross-validation used to improve and evaluate model accuracy.
+        </p>
+
+        <p>
+            The project also involved data preprocessing and cleaning to ensure dataset quality and reliability for analysis. 
+            Comparative model performance was evaluated to identify the most effective approach.
+        </p>
+
+        <p>
+            In addition, the findings were visualized using graphs and charts to present trends and insights in a clear and interpretable manner.
+        </p>
+
+        
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project5-1.png" class="slide active">
+            <img src="img/project5-2.png" class="slide">
+            <img src="img/project5-3.png" class="slide">
+        </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card">
+
+        <h3>Ice Cream Shop Web Application</h3>
+
+        <p>
+            A responsive web-based ice cream shop system designed and developed to provide users with a simple and interactive online shopping experience.
+        </p>
+
+        <p>
+            The system features a product listing module that displays available ice cream flavors with images and descriptions, allowing users to browse items easily. 
+            A shopping cart functionality was implemented to enable users to add, update, and remove selected products before checkout.
+        </p>
+
+        <p>
+            In addition, a functional checkout system was developed to process orders and simulate a complete e-commerce flow. 
+            The project focuses on responsive design to ensure usability across different devices, including desktop and mobile platforms.
+        </p>
+
+        <!-- Image Slider -->
+        <div class="slider">
+            <img src="img/project6-1.png" class="slide active">
+            <img src="img/project6-2.png" class="slide">
+            <img src="img/project6-3.png" class="slide">
+        </div>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project6-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <!-- Project 7 -->
+    <div class="project-card">
+
+        <h3>2D Pendulum Clock (OpenGL Animation Outcome)</h3>
+
+        <p>
+            The final outcome of this project is a 2D pendulum clock developed using OpenGL, featuring a fully constructed clock structure built from basic output primitives such as polygons, lines, and shapes. The design successfully simulates a traditional standing pendulum clock with clear visual components including the clock face, body structure, and pendulum system.
+        </p>
+
+        <p>
+            The pendulum is animated to swing smoothly between the left and right directions, demonstrating the implementation of transformation and motion principles in computer graphics. This interaction reflects the real-world physics behavior of a pendulum, where continuous oscillation is achieved through programmed animation logic.
+        </p>
+
+        <p>
+            The visual appearance is enhanced using solid color filling and shading techniques to improve clarity and realism. Overall, the project demonstrates the effective use of 2D graphics programming to create an interactive and visually structured pendulum clock animation.
+        </p>
+
+        <!-- Video -->
+        <video controls>
+            <source src="video/project7-demo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    </section>
+    <section id="working-exp" class="working-exp">
+        <h2>Working Experiences</h2>
+        <!-- Company Card -->
+        <div class="company-card">
+
+            <!-- Left: Logo -->
+            <div class="img-logo">
+                <img src="img/logo-usm.jpg" class="logo" alt="USM Logo">
+            </div>
+
+            <!-- Right: Description -->
+            <div class="company-details">
+                <h3>Multimedia Internship Student</h3>
+                <h4>Universiti Sains Malaysia (USM)</h4>
+                <p class="year">September 2025 - December 2026</p>
+
+                <p>
+                    Worked as a multimedia internship student and contributed to the development of two web-based systems: a Hall Rental System and a Registrar Announcement System. Involved in system design, interface development, testing, and improving user accessibility using HTML, CSS, PHP, and MySQL.
+                </p>
+            </div>
+        </div>
+        <!-- Company Card -->
+        <div class="company-card">
+
+            <!-- Left: Logo -->
+            <div class="img-logo">
+                <img src="img/logo-ibiden.jpg" class="logo" alt="Ibiden Logo">
+            </div>
+
+            <!-- Right: Description -->
+            <div class="company-details">
+                <h3>Production Operator</h3>
+                <h4>IBIDEN Electronics Malaysia Sdn. Bhd.</h4>
+                <p class="year">June 2022 - August 2022</p>
+
+                <p>
+                    Operated and monitored automated quality inspection machines for Printed Circuit Board (PCB) panels to ensure compliance with company quality standards. Performed detailed inspections to identify defects such as scratches, dents, and misalignments, and accurately recorded findings for production reporting and quality control documentation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentation" class="documentation">
+
+        <h2>Documentation & Activities</h2>
+
+        <p>*Move your cursor over the image to automatically slide through content.</p>
+
+        <div class="doc-container">
+
+            <!-- Item 1 -->
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/USMfarewell.jpg" class="slidedoc active">
+                    <img src="img/documentation/USMfarewell2.jpg" class="slidedoc">
+                    <img src="img/documentation/USMfarewell3.png" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Internship Completion & Farewell Session
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/USMmeeting1.jpg" class="slidedoc active">
+                    <img src="img/documentation/USMmeeting2.jpg" class="slidedoc">
+                    <img src="img/documentation/USMmeeting5.jpeg" class="slidedoc">
+                    <img src="img/documentation/USMmeeting3.jpg" class="slidedoc">
+                    <img src="img/documentation/USMmeeting4.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Meeting Session
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/USMassistSpeaker1.jpg" class="slidedoc active">
+                    <img src="img/documentation/USMassistSpeaker2.jpg" class="slidedoc">
+                    <img src="img/documentation/USMassistSpeaker3.jpg" class="slidedoc">
+                    <img src="img/documentation/USMassistSpeaker4.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Speaker Assistance & Event Support
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/USMbriskWalk1.jpg" class="slidedoc active">
+                    <img src="img/documentation/USMbriskWalk2.jpg" class="slidedoc">
+                    <img src="img/documentation/USMbriskWalk3.jpg" class="slidedoc">
+                    <img src="img/documentation/USMbriskWalk4.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Health Awareness Brisk Walk Programme
+                </div>
+            </div>
+
+            <div class="doc-card video-card">
+
+                <video controls>
+                    <source src="img/documentation/USMassistSpeaker6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="caption">
+                    Event Speaker Assistance Role
+                </div>
+
+            </div>
+
+            <div class="doc-card video-card">
+
+                <video controls>
+                    <source src="img/documentation/USMgotong-royong.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="caption">
+                    Workplace Clean-Up Programme
+                </div>
+
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/FYP1.jpg" class="slidedoc active">
+                    <img src="img/documentation/FYP2.jpg" class="slidedoc">
+                    <img src="img/documentation/FYP3.jpg" class="slidedoc">
+                    <img src="img/documentation/FYP4.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Final Year Project Development & Presentation
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/ajkMultimedia.jpg" class="slidedoc active">
+                    <img src="img/documentation/faci.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Technical and Media Committee
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <div class="sliderdoc">
+                    <img src="img/documentation/petah1.jpg" class="slidedoc active">
+                    <img src="img/documentation/petah2.jpg" class="slidedoc">
+                    <img src="img/documentation/petah3.jpg" class="slidedoc">
+                </div>
+                <div class="caption">
+                    Community Outreach Visit to Orphanage Home
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+    <div class="contact-left">
+        <h3>Contact Me</h3>
+
+        <p class="subtitle">
+            Open for hiring and currently seeking opportunities to grow, contribute, and gain experience in the fields of 
+            website development, software development, game development, and 3D modelling. Passionate about learning new technologies, 
+            collaborating with teams, and creating meaningful digital experiences.
+        </p>
+    </div>
+
+    <div class="contact-right">
+
+        <div class="contact-details">
+            <p><strong>Email:</strong> diananursyazleenn@gmail.com</p>
+            <p><strong>Phone:</strong> +60 17-5875209</p>
+            <p><strong>Location:</strong> Bagan Serai, Perak</p>
+        </div>
+
+        <div class="social-media">
+            <p><strong>Social Media:</strong></p>
+
+            <ul>
+                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+</body>
+<script>
+const sliders = document.querySelectorAll(".slider");
+
+sliders.forEach((slider) => {
+
+    let slides = slider.querySelectorAll(".slide");
+    let index = 0;
+
+    // Show first slide
+    slides[index].classList.add("active");
+
+    function showSlides() {
+
+        // Remove active from current slide
+        slides[index].classList.remove("active");
+
+        // Move to next slide
+        index = (index + 1) % slides.length;
+
+        // Show next slide
+        slides[index].classList.add("active");
+    }
+
+    // Auto slide every 3 seconds
+    setInterval(showSlides, 3000);
+
+});
+</script>
+
+<script>
+const slidersdoc = document.querySelectorAll(".sliderdoc");
+
+slidersdoc.forEach((sliderdoc) => {
+
+    const slidesdoc = sliderdoc.querySelectorAll(".slidedoc");
+    let index = 0;
+    let interval;
+
+    // Show first slide
+    slidesdoc[index].classList.add("active");
+
+    function showSlidesdoc() {
+
+        // Remove current active
+        slidesdoc[index].classList.remove("active");
+
+        // Next slide
+        index = (index + 1) % slidesdoc.length;
+
+        // Show next
+        slidesdoc[index].classList.add("active");
+    }
+
+    // Start looping
+    function startSlider() {
+        interval = setInterval(showSlidesdoc, 1000);
+    }
+
+    // Stop looping
+    function stopSlider() {
+        clearInterval(interval);
+    }
+
+    // When mouse enter -> start loop
+    sliderdoc.addEventListener("mouseenter", startSlider);
+
+    // When mouse leave -> stop loop
+    sliderdoc.addEventListener("mouseleave", stopSlider);
+
+});
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
